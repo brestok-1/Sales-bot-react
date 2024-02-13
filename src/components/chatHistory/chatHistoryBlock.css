@@ -1,0 +1,12 @@
+.chat-history-block{
+    height: calc(100vh - 10rem);
+    overflow-y: auto;
+}
+
+.message-example-bot{
+    background-color: var(--cell-border-color);
+}
+
+.message-text{
+    font-size: 13px;
+}
