@@ -7,8 +7,15 @@ function App() {
     const [dialogue, setDialogue] = useState([])
 
     const [personalityType, setPersonalityType] = useState(null);
-    const [targetAudience, setTargetAudience] = useState(null);
     const [objections, setObjections] = useState([{value: ""}]);
+    const [pitchScript, setPitchScript] = useState(null);
+    const [goal, setGoal] = useState(null);
+    const [reason, setReason] = useState(null);
+    const [lastContact, setLastContact] = useState(null);
+    const [productDetail, setProductDetail] = useState(null);
+    const [companyDescription, setCompanyDescription] = useState(null);
+    const [targetCustomer, setTargetCustomer] = useState(null);
+    const [personalBackground, setPersonalBackground] = useState(null);
 
     function updateDialogue(type, content) {
         setDialogue(dialogue => [...dialogue, {type: type, content: content}]);
@@ -47,18 +54,35 @@ function App() {
                       }}
                       presonalityType={personalityType}
                       objections={objections}
-                      targetAudience={targetAudience}
+                      targetCustomer={targetCustomer}
+                      pitchScript={pitchScript}
+                      goal={goal}
+                      reason={reason}
+                      lastContact={lastContact}
+                      productDetail={productDetail}
+                      companyDescription={companyDescription}
+                      personalBackground={personalBackground}
+
                 />
 
                 <ChatSettingsBlock
                     onSetPersonalityType={(type) => {
                         setPersonalityType(type)
                     }}
-                    onSetTargetAudience={(audience) => setTargetAudience(audience)}
+                    onSetTargetAudience={(audience) => setTargetCustomer(audience)}
                     objections={objections}
                     onAddObjectionInput={addObjectionInput}
                     onRemoveObjectionInput={removeObjectionInput}
                     onUpdateObjectionValue={updateObjectionValue}
+                    onSetPitchScript={(script) => {
+                        setPitchScript(script)
+                    }}
+                    onSetGoal={(goal) => setGoal(goal)}
+                    onSetReason={(reason) => setReason(reason)}
+                    onSetLastContact={(lastContact) => setLastContact(lastContact)}
+                    onSetProductDetail={(product) => setProductDetail(product)}
+                    onSetCompanyDescription={(description) => setCompanyDescription(description)}
+                    onSetPersonalBackground={(background) => setPersonalBackground(background)}
                 />
             </div>
         </div>

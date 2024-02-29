@@ -1,5 +1,5 @@
 export function getReport(messages) {
-    return fetch('http://localhost:8000/report', {
+    return fetch('http://localhost:7860/report', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'

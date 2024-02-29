@@ -1,10 +1,15 @@
-.chat-settings-block{
+.chat-settings-block {
     height: calc(100vh - 10rem);
     overflow-y: auto;
 }
 
-.settings-card{
+.settings-card {
     border: 2px solid var(--cell-border-color);
     border-radius: 20px;
     padding: 10px;
+}
+
+.form-select option {
+    white-space: normal;
+    text-overflow: clip;
 }
